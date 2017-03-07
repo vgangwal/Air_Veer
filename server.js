@@ -2,6 +2,8 @@ var express = require('express')
 var app = express()
 var l = require("lyric-get");
 
+app.use(express.static('Public'))
+
 app.get('/', function (req, res) {
   l.get("The Beatles", "Happiness is a Warm Gun", function(err, res){
     if(err){

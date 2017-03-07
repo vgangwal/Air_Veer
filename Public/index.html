@@ -7,7 +7,11 @@
   <script src="./app.js"></script>
   <link rel= "stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
-  
+<body ng-app="pantheonApp">
+  <div ng-controller="pantheonCtlr">
+    <ul>
+      <li> {{pantheon[0].artist}} </li>
+    </ul>
+  </div>
 </body>
 </html>

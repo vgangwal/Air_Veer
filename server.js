@@ -1,7 +1,16 @@
 var express = require('express')
 var app = express()
+var l = require("lyric-get");
 
 app.get('/', function (req, res) {
+  l.get("The Beatles", "Happiness is a Warm Gun", function(err, res){
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log(res);
+    }
+  });
   res.send('Hello World!')
 })
 

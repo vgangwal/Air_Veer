@@ -1,6 +1,5 @@
 var albumApp = angular.module('albumModule', [])
   .controller('albumCtlr', ['$scope', function($scope) {    
-    $scope.album = {title: "The Beatles (White Album)", year: 1968, rating: 10, tracklist: whiteAlbumSongs};
     var whiteAlbumSongs = [
       {name: "Back In The U.S.S.R.", lyrics: "yadda yadda yadda"},
       {name: "Dear Prudence", lyrics: "yadda yadda yadda"},
@@ -33,5 +32,5 @@ var albumApp = angular.module('albumModule', [])
       {name: "Revolution 9", lyrics: "yadda yadda yadda"},
       {name: "Good Night", lyrics: "yadda yadda yadda"}
     ];
-    $scope.song = whiteAlbumSongs[0];
+    $scope.album = {title: "The Beatles (White Album)", year: 1968, rating: 10, tracklist: whiteAlbumSongs};
   }]);

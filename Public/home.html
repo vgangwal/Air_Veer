@@ -1,0 +1,14 @@
+ <div ng-controller="homeCtlr">
+    <h3 ng-repeat="musician in pantheon" ng-click="setArtistAlbums(musician)">
+      {{musician.name}}
+      <h4 ng-show="showArtistAlbums" ng-repeat="album in albums" ng-click="setAlbum(album)">
+        {{album.title}}
+        <h5 ng-show="showAlbum" ng-repeat="song in album.tracklist" ng-click="setSong(song); setLyrics(song)">
+          {{song.name}}
+          <h6 ng-show="showLyrics">
+            {{lyrics}}
+          </h6>
+        </h5>
+      </h4>
+    </h3>
+  </div>

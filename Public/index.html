@@ -2,12 +2,21 @@
 <html>
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js></script>
   <script src="./app.js"></script>
+  <script src="./homeController.js"></script>
+  <script src="./albumController.js"></script>
   <link rel= "stylesheet" type="text/css" href="style.css" />
   <title>The Pantheon</title>
 </head>
 <body ng-app="pantheonApp">
-  <div ng-controller="pantheonCtlr">
+    <div ng-view></div>
+</body>
+</html>
+
+
+
+  <!--<div ng-controller="pantheonCtlr">
     <h3 ng-repeat="musician in pantheon" ng-click="setArtistAlbums(musician)">
       {{musician.name}}
       <h4 ng-show="showArtistAlbums" ng-repeat="album in albums" ng-click="setAlbum(album)">
@@ -20,6 +29,4 @@
         </h5>
       </h4>
     </h3>
-  </div>
-</body>
-</html>
+  </div>-->

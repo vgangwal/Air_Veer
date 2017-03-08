@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>The Pantheon</title>
-  <script> src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
   <script src="./app.js"></script>
   <link rel= "stylesheet" type="text/css" href="style.css" />
+  <title>The Pantheon</title>
 </head>
 <body ng-app="pantheonApp">
   <div ng-controller="pantheonCtlr">
-    <ul>
-      <li> {{pantheon[0].artist}} </li>
-    </ul>
+    <h3 ng-repeat="musician in pantheon" ng-click="setArtistAlbums(musician)">
+      {{musician.name}}
+      <h4 ng-show="showArtistAlbums" ng-repeat="album in albums" ng-click="setAlbum(album)">
+        {{album.title}}
+        <h5 ng-show="showAlbum" ng-repeat="song in album.tracklist" ng-click="setSong(song); setLyrics(song)">
+          {{song.name}}
+          <h6 ng-show="showLyrics">
+            {{lyrics}}
+          </h6>
+        </h5>
+      </h4>
+    </h3>
   </div>
 </body>
 </html>

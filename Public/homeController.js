@@ -10,14 +10,38 @@ var homeApp = angular.module('homeModule', [])
       lyrics: "Blaaaaaackbirrrrrrd, into the something something somethingggggg"}
     ];
 
+    //ALL DUMMY DATA
     var beatlesAlbums = [
+      {title: "Please Please Me", year: 1967, rating: 10, tracklist: undefined},  
+      {title: "With the Beatles", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Meet the Beatles!", year: 1967, rating: 10, tracklist: undefined},
+      {title: "A Hard Day's Night", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Beatles for Sale", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Help!", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Rubber Soul", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Revolver", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Sgt. Pepper's Lonely Island Hearts Club Band", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Magical Mystery Tour", year: 1967, rating: 10, tracklist: undefined},
       {title: "The Beatles (White Album)", year: 1968, rating: 10, tracklist: whiteAlbumSongs},
-      {title: "Sgt. Pepper", year: 1967, rating: 10, tracklist: undefined}
-    ];
+      {title: "Yellow Submarine", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Abbey Road", year: 1967, rating: 10, tracklist: undefined},
+      {title: "Let It Be", year: 1967, rating: 10, tracklist: undefined},
 
+    ];
+    
     $scope.pantheon = [
       {name: "The Beatles", albums: beatlesAlbums},
-      {name: "Kanye West", albums: undefined}
+      {name: "Kanye West", albums: undefined},
+      {name: "Frank Ocean", albums: undefined},
+      {name: "Radiohead", albums: undefined},
+      {name: "Tame Impala", albums: undefined},
+      {name: "The XX", albums: undefined},
+      {name: "Kendrick Lamar", albums: undefined},
+      {name: "Coldplay", albums: undefined},
+      {name: "Beyonce", albums: undefined},
+      {name: "Sam Cooke", albums: undefined},
+      {name: "Marvine Gaye", albums: undefined},
+      {name: "R. Kelly", albums: undefined}
     ];
     
     $scope.artist;

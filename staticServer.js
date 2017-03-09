@@ -30,7 +30,7 @@ app.use(express.static('Public'))
 //
 
 
-app.get('/api/albums', function (req, res) {
+app.get('/album', function (req, res) {
   l.get("The Beatles", "Happiness is a Warm Gun", function(err, lyrics){
     if(err){
         console.log(err);
@@ -49,18 +49,17 @@ app.get('/api/albums', function (req, res) {
   res.send(beatlesAlbums)
 })
 
-s.on('ready', function(results){
-  var albums = [];
-  for (var i = 0; i < results.length; i++) {
-    albums.push({
-      title: results[i].attributes.album,
-      year: results[i].attributes.year,
-      rating: results[i].attributes.score
-    });
-  }
-  console.log(albums);
-  // console.log("results of first review", results[0].attributes)
-});
+// s.on('ready', function(results){
+//   var albums = [];
+//   for (var i = 0; i < results.length; i++) {
+//     albums.push({
+//       title: results[i].attributes.album,
+//       year: results[i].attributes.year,
+//       rating: results[i].attributes.score
+//     });
+//   }
+//   console.log(albums);
+// });
 
 app.listen(4000, function () {
   console.log('Example app listening on port 4000!')
